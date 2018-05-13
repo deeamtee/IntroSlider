@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Intro Slider</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Оно работает!</string>
+    <string name="slide_1_desc">Обучающий слайд №1 !</string>
+
+    <string name="slide_2_title">Какой-то текст</string>
+    <string name="slide_2_desc">Обучающий слайд №2!</string>
+
+    <string name="slide_3_title">Еще какой-то текст!</string>
+    <string name="slide_3_desc">Сюда можно вставить горячие новости</string>
+
+    <string name="slide_4_title">Всё что душе угодно</string>
+    <string name="slide_4_desc">Парам-пам-пам!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_main">main_activity</string>
+</resources>
