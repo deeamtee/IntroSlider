@@ -32,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PrefManager prefManager = new PrefManager(getApplicationContext());
-        prefManager.setFirstTimeLaunch(true);
+        //для дебага,
+      //  PrefManager prefManager = new PrefManager(getApplicationContext());
+      //  prefManager.setFirstTimeLaunch(true);
 
         if (API_KEY.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please obtain your API KEY from themoviedb.org first!", Toast.LENGTH_LONG).show();
