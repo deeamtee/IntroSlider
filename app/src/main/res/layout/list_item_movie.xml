@@ -10,6 +10,7 @@
     android:padding="16dp">
 
     <LinearLayout
+        android:id="@+id/press_linear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -40,6 +41,10 @@
             android:maxLines="3"
             android:paddingRight="16dp"
             android:textColor="@color/colorGreyLight" />
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/urlImageMovie"
+            android:layout_height="0dp" />
 
     </LinearLayout>
 

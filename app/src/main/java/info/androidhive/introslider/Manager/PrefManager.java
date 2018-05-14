@@ -1,4 +1,4 @@
-package info.androidhive.introslider;
+package info.androidhive.introslider.Manager;
 
 import android.content.Context;
 import android.content.SharedPreferences;

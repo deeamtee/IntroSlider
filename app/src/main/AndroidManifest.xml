@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,18 +22,12 @@
         <activity
             android:name=".NotMainActivity"
             android:label="@string/title_activity_welcome"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main">
-
-        </activity>
-        <activity
-            android:name=".WelcomeActivity">
-
-        </activity>
+            android:label="@string/title_activity_main"></activity>
+        <activity android:name=".WelcomeActivity"></activity>
+        <activity android:name=".MovieActivity"></activity>
     </application>
 
 </manifest>

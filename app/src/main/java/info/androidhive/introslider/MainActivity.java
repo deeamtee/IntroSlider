@@ -11,6 +11,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import info.androidhive.introslider.Adapter.MoviesAdapter;
+import info.androidhive.introslider.Manager.PrefManager;
 import info.androidhive.introslider.Model.Movie;
 import info.androidhive.introslider.Model.MoviesResponse;
 import info.androidhive.introslider.Rest.ApiClient;
@@ -33,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //для дебага,
-      //  PrefManager prefManager = new PrefManager(getApplicationContext());
-      //  prefManager.setFirstTimeLaunch(true);
+//        PrefManager prefManager = new PrefManager(getApplicationContext());
+//       prefManager.setFirstTimeLaunch(true);
 
         if (API_KEY.isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please obtain your API KEY from themoviedb.org first!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Need to change API KEY from themoviedb.org ", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -52,9 +53,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
                 int statusCode = response.code();
+                //тут можно настроить обработчик response.code();
+                Log.i(TAG, "onResponse CODE: " + statusCode);
                 List<Movie> movies = response.body().getResults();
                 MoviesAdapter adapter = new MoviesAdapter(movies, R.layout.list_item_movie, getApplicationContext());
                 recyclerView.setAdapter(adapter);
+                Log.i(TAG, "onResponse: " + response.raw());
+                Log.d(TAG,"response.raw().request().url();"+response.raw().request().url());
             }
 
             @Override
@@ -64,4 +69,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
